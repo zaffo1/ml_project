@@ -1,0 +1,5 @@
+Our final best model is composed by 3 SVMs (since we have a 3-dim output). Each SVM uses a rbf kernel, epsilon=0.05, C=2800.
+These hyperparameters were chosed performing a double grid search (first coarse and then more refined) and evaluating the models based
+on the best MEE achieved on a 3-fold cross validation on the internal training set.
+After model selection, we retrained the model on all the training data and evaluated its performances on the internal test set, obtaining MEE = 0.5097.
+Before using our model on the blind test set, we did a final retraining on all the data, including the internal test set.
